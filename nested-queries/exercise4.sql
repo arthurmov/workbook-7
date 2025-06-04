@@ -9,23 +9,23 @@ where UnitPrice =
 	from products
     );
     
-SELECT
+select
   orderid,
   shipname,
   shipaddress
-FROM
+from
   orders
-WHERE
+where
   shipvia = (
-    SELECT shipperid
-    FROM shippers
-    WHERE companyname = 'Federal Shipping'
+    select shipperid
+    from shippers
+    where companyname = 'Federal Shipping'
   );
 	
 select
 orderid
 from
-orderdetails
+`order details`
 where
   productid = (
   select productid
